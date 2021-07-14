@@ -18,6 +18,7 @@
         "curly": ["error", "all"],
         "object-curly-spacing": ["error", "always"],
         "react/jsx-uses-react": ["error"],
+        "react/prop-types": "off",
         "react/jsx-uses-vars": ["error"],
         "react/react-in-jsx-scope": ["error"]
     },
