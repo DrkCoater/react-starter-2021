@@ -1,7 +1,17 @@
-import React from 'react'
-import ReactDom from 'react-dom'
-import App from './App'
-import './App.css'
-import './App.scss'
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './App.css';
+import './App.scss';
 
-ReactDom.render(<App />, document.getElementById('app'))
+export const user = {
+    authenticated: false,
+};
+
+render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    document.getElementById('app')
+);

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Router from './components/router/MainRouter';
+import routes from './configs/route-config';
 
-function App() {
+const App = () => {
     return (
         <div>
-            <h1>Welcome to React App</h1>
-            <h2>Welcome to React App</h2>
-            <h3>Date : {new Date().toDateString()}</h3>
+            <Router routes={routes} />
         </div>
-    )
-}
+    );
+};
 
-export default App
+export default App;
