@@ -1,0 +1,25 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "env": {
+        "browser": true
+    },
+    "settings": {
+        "react": {
+            "version": "17.0"
+        }
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "prefer-const": ["warn"],
+        "no-console": ["error"],
+        "no-debugger": ["error"],
+        "strict": ["error", "never"],
+        "curly": ["error", "all"],
+        "object-curly-spacing": ["error", "always"],
+        "react/jsx-uses-react": ["error"],
+        "react/jsx-uses-vars": ["error"],
+        "react/react-in-jsx-scope": ["error"]
+    },
+    "plugins": ["prettier", "react"]
+}
