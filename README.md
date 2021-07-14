@@ -1,7 +1,16 @@
-# react-starter-2021
-React starter 2021
+## Minimal configuration ReactJS starter
 
-Minimal configuration ReactJS starter
+### Install
+```bash
 npm install
+```
+
+### Run
+```bash
 npm start
-npm build
+```
+
+### Build
+```bash
+npm run build
+```
