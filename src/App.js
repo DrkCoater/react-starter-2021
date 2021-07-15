@@ -1,13 +1,17 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement, incrementBy, decrementBy } from './redux/counter';
 
-function App() {
+export default function App() {
+    const { count } = useSelector((state) => state.counter);
+    const dispatch = useDispatch();
     return (
-        <div>
-            <h1>Welcome to React App</h1>
-            <h2>Welcome to React App</h2>
-            <h3>Date : {new Date().toDateString()}</h3>
+        <div className="App">
+            <h1> The count is: {count}</h1>
+            <button onClick={() => dispatch(increment())}>increment1</button>
+            <button onClick={() => dispatch(decrement())}>decrement</button>
+            <button onClick={() => dispatch(incrementBy(33))}>Increment by 33</button>
+            <button onClick={() => dispatch(decrementBy(33))}>Decrement by 33</button>
         </div>
     );
 }
-
-export default App;
