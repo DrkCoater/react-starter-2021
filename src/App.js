@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement, incrementBy, decrementBy } from './redux/counter';
+import ImgSrc from './assets/images/beautiful.jpg';
 
 export default function App() {
     const { count } = useSelector((state) => state.counter);
@@ -12,6 +13,8 @@ export default function App() {
             <button onClick={() => dispatch(decrement())}>decrement</button>
             <button onClick={() => dispatch(incrementBy(33))}>Increment by 33</button>
             <button onClick={() => dispatch(decrementBy(33))}>Decrement by 33</button>
+            <br/><br/>
+            <img src={ImgSrc} />
         </div>
     );
 }
