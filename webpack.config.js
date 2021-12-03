@@ -12,7 +12,12 @@ module.exports = {
     // webpack 5 comes with devServer which loads in development mode
     devServer: {
         port: 3000,
-        watchContentBase: true
+        watchContentBase: true,
+        historyApiFallback: {
+            rewrites: [{ from: /./, to: '/index.html' }]
+        },
+        contentBase: './',
+        hot: true
     },
     // Rules of how webpack will take our files, complie & bundle them for the browser
     module: {
