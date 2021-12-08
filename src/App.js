@@ -1,10 +1,10 @@
 import React from 'react';
+import ImgSrc from './assets/images/test-image.jpg';
 
 function App() {
     return (
         <div>
-            <h1>Welcome to React App</h1>
-            <h2>Welcome to React App</h2>
+            <img src={ImgSrc} alt="girl" />
             <h3>Date : {new Date().toDateString()}</h3>
         </div>
     );
