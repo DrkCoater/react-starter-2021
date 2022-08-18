@@ -9,16 +9,19 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'index.bundle.js'
     },
-    // webpack 5 comes with devServer which loads in development mode
     devServer: {
         port: 3000,
-        watchContentBase: true,
-        historyApiFallback: {
-            rewrites: [{ from: /./, to: '/index.html' }]
-        },
-        contentBase: './',
+        historyApiFallback: true,
+        proxy: [
+            {
+                context: ['/auth', '/api/v1'],
+                target: 'http://localhost:1499'
+            }
+        ],
+        watchFiles: ['src/**/*.scss'],
         hot: true
     },
+    devtool: 'eval-source-map',
     // Rules of how webpack will take our files, complie & bundle them for the browser
     module: {
         rules: [
