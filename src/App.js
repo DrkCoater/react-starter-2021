@@ -1,4 +1,5 @@
 import React from 'react';
+import ImgSrc from './assets/images/test-image.jpg';
 
 export default function App() {
     const { count } = useSelector((state) => state.counter);
