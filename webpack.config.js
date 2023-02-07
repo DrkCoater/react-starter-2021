@@ -21,7 +21,10 @@ module.exports = {
         hot: true
     },
     devtool: 'eval-source-map',
-    // Rules of how webpack will take our files, complie & bundle them for the browser
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
+    // Rules of how webpack will take our files, compile & bundle them for the browser
     module: {
         rules: [
             {
