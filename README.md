@@ -1,4 +1,5 @@
 ## Minimal configuration ReactJS starter
+## Updated on May 24 2023
 
 ### Install
 ```bash
